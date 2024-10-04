@@ -6,7 +6,17 @@
         xmlns:local="clr-namespace:HelloWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Name="gridMain">
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72">
+            Hello, WPF!
+        </TextBlock>
 
+        <Button FontWeight="Bold" Margin="160,300,440,50">
+            <WrapPanel>
+                <TextBlock Foreground="Blue">Multi</TextBlock>
+                <TextBlock Foreground="Red">Color</TextBlock>
+                <TextBlock>XAMLButton</TextBlock>
+            </WrapPanel>
+        </Button>
     </Grid>
 </Window>
