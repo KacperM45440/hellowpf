@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:HelloWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Name="gridMain">
+    <!-- <Grid Name="gridMain" MouseUp="gridMain_MouseUp" MouseDown="gridMain_MouseDown" Background="#CBCEA9"> -->
+    <Grid Name="gridMain" Background="#CBCEA9">
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72">
             Hello, WPF!
         </TextBlock>

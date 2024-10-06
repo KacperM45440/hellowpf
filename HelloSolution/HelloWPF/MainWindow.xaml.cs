@@ -26,7 +26,14 @@ namespace HelloWPF
             buttonText = new();
 
             InitializeComponent();
+            SubscribeToEvents();
             CreateButton();
+        }
+
+        private void SubscribeToEvents()
+        {
+            gridMain.MouseUp += new MouseButtonEventHandler(gridMain_MouseUp);
+            gridMain.MouseDown += new MouseButtonEventHandler(gridMain_MouseDown);
         }
 
         private void CreateButton()
@@ -56,6 +63,16 @@ namespace HelloWPF
 
             newButton.Content = buttonPanel;
             gridMain.Children.Add(newButton);
+        }
+
+        private void gridMain_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("You clicked me at " + e.GetPosition(this).ToString());
+        }
+
+        private void gridMain_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }
